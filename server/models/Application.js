@@ -29,22 +29,17 @@ const applicationSchema = new mongoose.Schema({
             },
             date: {
                 type: Date
-            },
-            status: {
-                type: String,
-                enum: ['Scheduled', 'Cleared', 'Rejected', 'Pending'],
-                default: 'Pending'
-            },
-            notes: {
-                type: String
-            },
-            user: {
-                type: mongoose.Types.ObjectId,
-                ref: 'User',
-                required: true
-            }
+            }            
         }
-    ]
+    ],
+    notes: {
+        type: String
+    },
+    user: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 },
 {
     timestamps: true
