@@ -27,6 +27,9 @@ const userSchema = new mongoose.Schema({
         type: Number,
         enum: [1,2,3,4],
         required: true
+    },
+    refreshToken: {
+        type: String
     }
 },
 {
