@@ -11,7 +11,7 @@ const applicationSchema = new mongoose.Schema({
     },
     type: {
         type: String, 
-        enum: ['Intership', 'Placement'],
+        enum: ['Internship', 'Placement'],
         required: true
     },
     status: {
@@ -24,12 +24,21 @@ const applicationSchema = new mongoose.Schema({
     },
     rounds: [
         {
+            roundNo: {
+                type: Number,
+                required: true
+            },
             roundName: {
                 type: String
             },
             date: {
                 type: Date
-            }            
+            },
+            status: {
+                type: String,
+                enum: ["Pending", "Scheduled", "Cleared", "Rejected"],
+                default: "Pending"
+            }           
         }
     ],
     notes: {
