@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const User = require("./User");
 
 const experienceSchema = new mongoose.Schema({
     company: {
@@ -15,6 +14,7 @@ const experienceSchema = new mongoose.Schema({
     },
     rounds: [
         {
+            roundNo: {type: Number},
             roundName: {type: String},
             description: {type: String}
         }

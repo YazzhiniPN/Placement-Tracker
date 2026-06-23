@@ -41,6 +41,7 @@ async function getApplications(req,res){
         }
 
         const applications = await Application.find({user: userId});
+
         return res.json({applications: applications});
 
     } catch (err) {
