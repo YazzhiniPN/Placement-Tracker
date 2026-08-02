@@ -4,7 +4,7 @@ const {userRegister, userLogin, userLogout, refreshAccessToken} = require("../co
 
 router.post("/register", userRegister);
 router.post("/login", userLogin);
-router.post("logout", userLogout);
-router.post("refresh", refreshAccessToken);
+router.post("/logout", userLogout);
+router.post("/refresh", refreshAccessToken);
 
 module.exports = router;

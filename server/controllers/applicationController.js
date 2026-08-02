@@ -182,7 +182,7 @@ async function addRound(req,res){
         const round = {
             roundNo: (application.rounds?.length || 0)+1,
             roundName: req.body.roundName,
-            data: req.body.data
+            date: req.body.date
         }
 
         application.rounds.push(round);
